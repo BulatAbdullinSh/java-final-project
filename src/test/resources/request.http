@@ -35,4 +35,4 @@ Content-Type: image/jpeg
 
 ###
 
-http://localhost:8080/calculate?idRegion=1&idAgeAndExperience=1&idEnginePower=1
+http://localhost:8080/calculate?idRegion=1&idAgeAndExperience=1&idEnginePower=4&idLimitStatus=1&idSeasonalityStatus=1&idInsuranceCompany=1&insuranceTerm=1

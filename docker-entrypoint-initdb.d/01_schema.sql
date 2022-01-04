@@ -23,6 +23,7 @@ CREATE TABLE age_and_experience_status
     removed BOOL        NOT NULL                    DEFAULT FALSE,
     created timestamptz NOT NULL                    DEFAULT CURRENT_TIMESTAMP
 );
+
 CREATE TABLE engine_power
 (   id_engine_power      BIGSERIAL PRIMARY KEY,
     engine_power_horse_power      TEXT        NOT NULL,
@@ -30,6 +31,23 @@ CREATE TABLE engine_power
     removed BOOL        NOT NULL                    DEFAULT FALSE,
     created timestamptz NOT NULL                    DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE limit_status
+(   id_limit_status      BIGSERIAL PRIMARY KEY,
+    limit_drivers      TEXT        NOT NULL,
+    coefficient_cc       DOUBLE PRECISION         NOT NULL CHECK ( coefficient_cc >= 0 ),
+    removed BOOL        NOT NULL                    DEFAULT FALSE,
+    created timestamptz NOT NULL                    DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE seasonality_status
+(   id_seasonality_status      BIGSERIAL PRIMARY KEY,
+    months      TEXT        NOT NULL,
+    coefficient_cs       DOUBLE PRECISION         NOT NULL CHECK ( coefficient_cs >= 0 ),
+    removed BOOL        NOT NULL                    DEFAULT FALSE,
+    created timestamptz NOT NULL                    DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE sales
 (
     id         BIGSERIAL PRIMARY KEY,

@@ -15,9 +15,14 @@ public class CalculateInsurancePremiumController {
     public double insurancePremium(
             @RequestParam long idRegion,
             @RequestParam long idAgeAndExperience,
-            @RequestParam long idEnginePower
+            @RequestParam long idEnginePower,
+            @RequestParam long idLimitStatus,
+            @RequestParam long idSeasonalityStatus,
+            @RequestParam long idInsuranceCompany,
+            @RequestParam double insuranceTerm
+
     ) {
-        return service.insurancePremium(idRegion,idAgeAndExperience, idEnginePower);
+        return service.insurancePremium(idRegion,idAgeAndExperience, idEnginePower,idLimitStatus,idSeasonalityStatus,idInsuranceCompany,insuranceTerm);
         }
 
 }

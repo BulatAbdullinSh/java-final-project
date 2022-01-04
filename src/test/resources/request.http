@@ -1,0 +1,38 @@
+GET http://localhost:8080/insuranceproducts/getAll
+
+###
+
+GET http://localhost:8080/insuranceproducts/getById?id=6
+
+###
+
+GET http://localhost:8080/insuranceproducts/getById/6
+
+###
+
+POST http://localhost:8080/insuranceproducts/save
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "Java Book",
+  "price": 1000
+}
+
+
+###
+
+POST http://localhost:8080/insuranceproducts/removeById?id=1
+
+###
+
+POST http://localhost:8080/media/multi-multipart
+Content-Type: multipart/form-data; boundary=WebBoundary
+
+--WebBoundary
+Content-Disposition: form-data; name="files"; filename="media.jpg"
+Content-Type: image/jpeg
+
+###
+
+http://localhost:8080/calculate?idRegion=1&idAgeAndExperience=1&idEnginePower=1

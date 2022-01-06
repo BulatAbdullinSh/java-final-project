@@ -18,7 +18,7 @@ public class CalculateInsurancePremiumService {
         final int basicTariff = manager.calculateBasicTariff(idInsuranceCompany);
         double insurancePremiumPrice = coefficientTC * coefficientES*coefficientEP*coefficientCC*coefficientCS*basicTariff*insuranceTerm;
         final double result = Math.ceil(insurancePremiumPrice);
-        return result;
+        return ((int) result);
     }
 
 }

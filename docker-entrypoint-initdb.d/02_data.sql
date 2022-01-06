@@ -1,9 +1,9 @@
 INSERT INTO insurance_products (insurance_company_name,basic_tariff,image)
-VALUES ('Insurance Company №1', 3000,'ic1.png'),
-       ('Insurance Company №2', 2000,'ic2.png'),
-       ('Insurance Company №3', 1500,'ic3.png'),
-       ('Insurance Company №4', 2100,'ic4.png'),
-       ('Insurance Company №5', 5000,'ic5.png'),
+VALUES ('Insurance Company №1', 3750,'ic1.png'),
+       ('Insurance Company №2', 3550,'ic2.png'),
+       ('Insurance Company №3', 3500,'ic3.png'),
+       ('Insurance Company №4', 4100,'ic4.png'),
+       ('Insurance Company №5', 4200,'ic5.png'),
        ('Insurance Company №6', 4300,'ic6.png');
 
 INSERT INTO region(locality, coefficient_tc)

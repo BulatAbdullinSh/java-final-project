@@ -15,8 +15,10 @@ Content-Type: application/json
 
 {
   "id": 0,
-  "name": "Java Book",
-  "price": 1000
+  "insuranceCompanyName": "Insurance company №8",
+  "basicTariff": 4150,
+  "image":"{{mediaName}}"
+
 }
 
 
@@ -35,4 +37,21 @@ Content-Type: image/jpeg
 
 ###
 
-http://localhost:8080/calculate?idRegion=1&idAgeAndExperience=1&idEnginePower=4&idLimitStatus=1&idSeasonalityStatus=1&idInsuranceCompany=1&insuranceTerm=1
+http://localhost:8080/calculate?idRegion=1&idAgeAndExperience=1&idEnginePower=1&idLimitStatus=1&idSeasonalityStatus=1&idInsuranceCompany=2&insuranceTerm=1
+
+###
+
+POST http://localhost:8080/sales/register
+Content-Type: application/json
+
+{
+  "insuranceCompanyName": "Insurance Company №3",
+  "userName": "Jonn",
+  "userSurname": "Smitt",
+  "vinNumberCar": "ZC45545NT4544",
+  "phoneNumber": "9503432343",
+  "email": "smitt@mail.ru",
+  "region":  "Казань",
+  "bankCardNumber": "2344 3456 6789 3456",
+  "insurancePremiumPrice": 5340
+}

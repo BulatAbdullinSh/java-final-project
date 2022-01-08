@@ -37,7 +37,7 @@ Content-Type: image/jpeg
 
 ###
 
-http://localhost:8080/calculate?idRegion=1&idAgeAndExperience=1&idEnginePower=1&idLimitStatus=1&idSeasonalityStatus=1&idInsuranceCompany=2&insuranceTerm=1
+http://localhost:8080/calculate?idRegion=10&idAgeAndExperience=2&idEnginePower=4&idLimitStatus=1&idSeasonalityStatus=8&idInsuranceCompany=2&insuranceTerm=1
 
 ###
 

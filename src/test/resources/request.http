@@ -32,8 +32,8 @@ POST http://localhost:8080/media/multi-multipart
 Content-Type: multipart/form-data; boundary=WebBoundary
 
 --WebBoundary
-Content-Disposition: form-data; name="files"; filename="media.jpg"
-Content-Type: image/jpeg
+Content-Disposition: form-data; name="files"; filename="media.png"
+Content-Type: image/png
 
 ###
 

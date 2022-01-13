@@ -6,7 +6,7 @@ GET http://localhost:8080/insuranceproducts/getById?id=6
 
 ###
 
-GET http://localhost:8080/insuranceproducts/getById/6
+GET http://localhost:8080/insuranceproducts/getById/4
 
 ###
 
@@ -37,7 +37,7 @@ Content-Type: image/png
 
 ###
 
-http://localhost:8080/calculate?idRegion=10&idAgeAndExperience=2&idEnginePower=4&idLimitStatus=1&idSeasonalityStatus=8&idInsuranceCompany=2&insuranceTerm=1
+GET http://localhost:8080/calculate?idRegion=10&idAgeAndExperience=2&idEnginePower=4&idLimitStatus=1&idSeasonalityStatus=8&idInsuranceCompany=2&insuranceTerm=1
 
 ###
 

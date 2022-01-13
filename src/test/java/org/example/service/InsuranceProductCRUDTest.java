@@ -40,45 +40,45 @@ class InsuranceProductCRUDTest {
                                 // language=JSON
                                 """
                                     {
-                                      "insuranceProducts": [
-                                              {
-                                                "id": 1,
-                                                "insuranceCompanyName": "Insurance Company №1",
-                                                "basicTariff": 3750,
-                                                "image": "ic1.png"
-                                              },
-                                              {
-                                                "id": 2,
-                                                "insuranceCompanyName": "Insurance Company №2",
-                                                "basicTariff": 3550,
-                                                "image": "ic2.png"
-                                              },
-                                              {
-                                                "id": 3,
-                                                "insuranceCompanyName": "Insurance Company №3",
-                                                "basicTariff": 3500,
-                                                "image": "ic3.png"
-                                              },
-                                              {
-                                                "id": 4,
-                                                "insuranceCompanyName": "Insurance Company №4",
-                                                "basicTariff": 4100,
-                                                "image": "ic4.png"
-                                              },
-                                              {
-                                                "id": 5,
-                                                "insuranceCompanyName": "Insurance Company №5",
-                                                "basicTariff": 4200,
-                                                "image": "ic5.png"
-                                              },
-                                              {
-                                                "id": 6,
-                                                "insuranceCompanyName": "Insurance Company №6",
-                                                "basicTariff": 4300,
-                                                "image": "ic6.png"
-                                              }
-                                            ]
-                                    }
+                                          "insuranceProducts": [
+                                            {
+                                              "id": 1,
+                                              "insuranceCompanyName": "Insurance Company №1",
+                                              "basicTariff": 3750,
+                                              "image": "ic1.png"
+                                            },
+                                            {
+                                              "id": 2,
+                                              "insuranceCompanyName": "Insurance Company №2",
+                                              "basicTariff": 3550,
+                                              "image": "ic2.png"
+                                            },
+                                            {
+                                              "id": 3,
+                                              "insuranceCompanyName": "Insurance Company №3",
+                                              "basicTariff": 3500,
+                                              "image": "ic3.png"
+                                            },
+                                            {
+                                              "id": 4,
+                                              "insuranceCompanyName": "Insurance Company №4",
+                                              "basicTariff": 4100,
+                                              "image": "ic4.png"
+                                            },
+                                            {
+                                              "id": 5,
+                                              "insuranceCompanyName": "Insurance Company №5",
+                                              "basicTariff": 4200,
+                                              "image": "ic5.png"
+                                            },
+                                            {
+                                              "id": 6,
+                                              "insuranceCompanyName": "Insurance Company №6",
+                                              "basicTariff": 4300,
+                                              "image": "ic6.png"
+                                            }
+                                          ]
+                                        }
                                     """
                         )
                 );
@@ -92,13 +92,13 @@ class InsuranceProductCRUDTest {
                         MockMvcResultMatchers.content().json(
                                 // language=JSON
                                 """
-                                    {
-                                      "insuranceProducts": {
-                                                "id": 3,
-                                                "insuranceCompanyName": "Insurance Company №3",
-                                                "basicTariff": 3500,
-                                                "image": "ic3.png"
-                                              }
+                                   {
+                                      "insuranceProduct": {
+                                        "id": 3,
+                                        "insuranceCompanyName": "Insurance Company №3",
+                                        "basicTariff": 3500,
+                                        "image": "ic3.png"
+                                      }
                                     }
                                     """
                         )
@@ -112,13 +112,13 @@ class InsuranceProductCRUDTest {
                         MockMvcResultMatchers.content().json(
                                 // language=JSON
                                 """
-                                    {
-                                      "insuranceProducts": {
-                                                                 "id": 4,
-                                                                 "insuranceCompanyName": "Insurance Company №4",
-                                                                 "basicTariff": 4100,
-                                                                 "image": "ic4.png"
-                                                               }
+                                   {
+                                      "insuranceProduct": {
+                                        "id": 4,
+                                        "insuranceCompanyName": "Insurance Company №4",
+                                        "basicTariff": 4100,
+                                        "image": "ic4.png"
+                                      }
                                     }
                                     """
                         )

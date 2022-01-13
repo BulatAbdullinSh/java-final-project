@@ -20,7 +20,6 @@ import java.util.UUID;
 public class MediaManager {
     private final Tika tika = new Tika();
     private final Path path = Path.of("media");
-    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
     private final Map<String, String> types = Map.of(
             "image/png", ".png"
     );
@@ -29,9 +28,9 @@ public class MediaManager {
         Files.createDirectories(path);
     }
 
-    public UploadSingleMediaResponseDTO save(byte[] bytes, String contentType) {
+    public UploadSingleMediaResponseDTO save(byte[] bytes) {
         try {
-            final String name = generateName(contentType);
+            final String name = generateName(tika.detect(bytes));
             Files.write(path.resolve(name), bytes);
             return new UploadSingleMediaResponseDTO(name);
         }  catch (IOException e) {
@@ -41,7 +40,7 @@ public class MediaManager {
 
     public UploadSingleMediaResponseDTO save(MultipartFile file) {
         try {
-            final String name = generateName(file.getContentType());
+            final String name = generateName(tika.detect(file.getInputStream()));
             file.transferTo(path.resolve(name));
             return new UploadSingleMediaResponseDTO(name);
         }  catch (IOException e) {

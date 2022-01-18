@@ -60,3 +60,21 @@ Content-Type: application/json
 
 
 POST http://localhost:8080/coefficient/tc?idRegion=2&coefficientTC=3
+
+###
+
+POST http://localhost:8080/coefficient/es?idAgeAndExperience=2&coefficientES=3
+
+###
+
+POST http://localhost:8080/coefficient/ep?idEnginePower=2&coefficientEP=2
+
+###
+
+POST http://localhost:8080/coefficient/cc?idLimitStatus=2&coefficientCC=3
+
+###
+
+POST http://localhost:8080/coefficient/cs?idSeasonalityStatus=2&coefficientCS=3
+
+

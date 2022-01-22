@@ -131,7 +131,7 @@ class InsuranceProductCRUDTest {
                 .andExpectAll(
                         MockMvcResultMatchers.status().isNotFound()
                 );
-  /*      mockMvc.perform(
+        mockMvc.perform(
                         MockMvcRequestBuilders.post("/insuranceproducts/save")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(
@@ -141,8 +141,7 @@ class InsuranceProductCRUDTest {
                                                 "id": 0,
                                                 "insuranceCompanyName": "Insurance company №8",
                                                 "basicTariff": 4150
-                                              
-                                              }
+                                                }
                                             """
                                 )
                 )
@@ -152,15 +151,15 @@ class InsuranceProductCRUDTest {
                                 // language=JSON
                                 """
                                 {
-                                  "insuranceProducts": {
-                                    "id": 7,
-                                    "insuranceCompanyName": "Insurance company №8",
-                                    "basicTariff": 4150,
-                                    "image": "noimage.png"
+                                  "insuranceProduct": {
+                                  "id": 7,
+                                  "insuranceCompanyName": "Insurance company №8",
+                                  "basicTariff": 4150,
+                                  "image": "noimage.png"
                                   }
                                 }
                                 """
                         )
-                );*/
+                );
     }
 }

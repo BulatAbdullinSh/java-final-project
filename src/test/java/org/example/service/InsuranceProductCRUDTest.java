@@ -132,7 +132,7 @@ class InsuranceProductCRUDTest {
                         MockMvcResultMatchers.status().isNotFound()
                 );
 */
-        mockMvc.perform(
+  /*      mockMvc.perform(
                         MockMvcRequestBuilders.post("/insuranceproducts/save")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(
@@ -162,6 +162,6 @@ class InsuranceProductCRUDTest {
                                 }
                                 """
                         )
-                );
+                );*/
     }
 }

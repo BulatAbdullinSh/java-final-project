@@ -28,12 +28,40 @@ POST http://localhost:8080/insuranceproducts/removeById?id=1
 
 ###
 
+###
+
+POST http://localhost:8080/media/bytes
+Content-Type: image/png
+
+< media.png
+
+> {%
+client.global.set('mediaName', response.body.name);
+%}
+
+###
+
+POST http://localhost:8080/media/multipart
+Content-Type: multipart/form-data; boundary=WebBoundary
+
+--WebBoundary
+Content-Disposition: form-data; name="file"; filename="media.png"
+Content-Type: image/png
+
+< media.png
+--WebBoundary--
+
+###
+
 POST http://localhost:8080/media/multi-multipart
 Content-Type: multipart/form-data; boundary=WebBoundary
 
 --WebBoundary
 Content-Disposition: form-data; name="files"; filename="media.png"
 Content-Type: image/png
+
+< media.png
+--WebBoundary
 
 ###
 

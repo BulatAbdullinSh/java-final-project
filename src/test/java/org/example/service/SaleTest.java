@@ -37,15 +37,15 @@ public class SaleTest {
                                         // language=JSON
                                         """
                                             {
-                                                    "insuranceCompanyName": "Insurance Company №3",
-                                                    "userName": "Jonn",
-                                                     "userSurname": "Smitt",
-                                                     "vinNumberCar": "ZC45545NT4544",
-                                                     "phoneNumber": "9503432343",
-                                                     "email": "smitt@mail.ru",
-                                                      "region":  "Казань",
-                                                      "bankCardNumber": "2344 3456 6789 3456",
-                                                      "insurancePremiumPrice": 5340
+                                            "insuranceCompanyName": "Insurance Company №3",
+                                            "userName": "Jonn",
+                                            "userSurname": "Smitt",
+                                            "vinNumberCar": "ZC45545NT4544",
+                                            "phoneNumber": "9503432343",
+                                            "email": "smitt@mail.ru",
+                                            "region":  "Казань",
+                                            "bankCardNumber": "2344 3456 6789 3456",
+                                            "insurancePremiumPrice": 5340
                                             }
                                             """
                                 )

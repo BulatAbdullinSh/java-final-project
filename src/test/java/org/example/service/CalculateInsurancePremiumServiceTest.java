@@ -39,19 +39,19 @@ class CalculateInsurancePremiumServiceTest {
                                         """
                                             {
                                                "idRegion": 10,
-                                                  "idAgeAndExperience": 1,
-                                                  "idEnginePower": 4,
-                                                  "idLimitStatus": 1,
-                                                  "idSeasonalityStatus": 8,
-                                                  "idInsuranceCompany": 2,
-                                                  "insuranceTerm": 1
+                                               "idAgeAndExperience": 1,
+                                               "idEnginePower": 4,
+                                               "idLimitStatus": 1,
+                                               "idSeasonalityStatus": 8,
+                                               "idInsuranceCompany": 2,
+                                               "insuranceTerm": 1
                                                 }
                                             """
                                 )
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
-                        MockMvcResultMatchers.content().string("4670")
+                        MockMvcResultMatchers.content().string(String.valueOf(4670.0))
                 );
     }
 }

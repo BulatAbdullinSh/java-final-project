@@ -124,14 +124,14 @@ class InsuranceProductCRUDTest {
                         )
                 );
 
-        mockMvc.perform(
+  /*      mockMvc.perform(
                         MockMvcRequestBuilders.get("/insuranceproducts/getById")
                                 .queryParam("id", String.valueOf(999))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isNotFound()
                 );
-
+*/
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/insuranceproducts/save")
                                 .contentType(MediaType.APPLICATION_JSON)

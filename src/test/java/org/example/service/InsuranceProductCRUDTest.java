@@ -126,7 +126,7 @@ class InsuranceProductCRUDTest {
 
         mockMvc.perform(
                         MockMvcRequestBuilders.get("/insuranceproducts/getById")
-                                .queryParam("id", String.valueOf(999))
+                                .queryParam("id", String.valueOf(9999))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isNotFound()

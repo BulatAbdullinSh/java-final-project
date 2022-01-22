@@ -65,7 +65,18 @@ Content-Type: image/png
 
 ###
 
-GET http://localhost:8080/calculate?idRegion=10&idAgeAndExperience=2&idEnginePower=4&idLimitStatus=1&idSeasonalityStatus=8&idInsuranceCompany=2&insuranceTerm=1
+GET http://localhost:8080/calculate
+Content-Type: application/json
+
+{
+  "idRegion": 10,
+  "idAgeAndExperience": 1,
+  "idEnginePower": 4,
+  "idLimitStatus": 1,
+  "idSeasonalityStatus": 8,
+  "idInsuranceCompany": 2,
+  "insuranceTerm": 1
+}
 
 ###
 

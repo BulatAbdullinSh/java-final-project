@@ -1,36 +1,57 @@
 package org.example.service;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.testcontainers.containers.DockerComposeContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+
+import java.nio.file.Path;
+
+@Testcontainers
+@SpringBootTest
+@DirtiesContext
+@AutoConfigureMockMvc
+
 class CalculateInsurancePremiumServiceTest {
+    @Container
+    static DockerComposeContainer<?> compose = new DockerComposeContainer<>(
+            Path.of("docker-compose.yml").toFile()
+    );
 
-   ///private CalculateInsurancePremiumManager manager;
-    //private final MarginLevel marginLevel;
-   /* @Test
-        void shouldCalculateInsuracePremium() {
-        final long idRegion = 10;
-        final long idAgeAndExperience = 2;
-        final long idEnginePower = 4;
-        final long idLimitStatus = 1;
-        final long idSeasonalityStatus = 8;
-        final long idInsuranceCompany = 2;
-        final double insuranceTerm = 1;
-        final CalculateInsurancePremiumService service = new CalculateInsurancePremiumService(idRegion,idAgeAndExperience,idEnginePower,idLimitStatus,idSeasonalityStatus,idInsuranceCompany,insuranceTerm);
-*/
-        /*final long idRegion = 10;
-        final long idAgeAndExperience = 2;
-        final long idEnginePower = 4;
-        final long idLimitStatus = 1;
-        final long idSeasonalityStatus = 8;
-        final long idInsuranceCompany = 2;*/
-        final double insuranceTerm = 1;
-        final double marginLevel = 0.015;
-        final int expected = 4411;
-        /*final double coefficientTC = manager.calculateTC(idRegion);
-        final double coefficientES = manager.calculateES(idAgeAndExperience);
-        final double coefficientEP = manager.calculateEP(idEnginePower);
-        final double coefficientCC = manager.calculateCC(idLimitStatus);
-        final double coefficientCS = manager.calculateCS(idSeasonalityStatus);
-        final int basicTariff = manager.calculateBasicTariff(idInsuranceCompany);*/
-       // final double actual = service.insurancePremium(coefficientTC,coefficientES,coefficientEP,coefficientCC,coefficientCS,basicTariff,insuranceTerm,marginLevel);*/
+    @Autowired
+    MockMvc mockMvc;
 
-       // assertEquals(actual, expected);
+    @Test
+    void shouldCalculateInsuracePremium() throws Exception {
+        mockMvc.perform(
+                        MockMvcRequestBuilders.post("/calculate")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(
+                                        // language=JSON
+                                        """
+                                            {
+                                               "idRegion": 10,
+                                                  "idAgeAndExperience": 1,
+                                                  "idEnginePower": 4,
+                                                  "idLimitStatus": 1,
+                                                  "idSeasonalityStatus": 8,
+                                                  "idInsuranceCompany": 2,
+                                                  "insuranceTerm": 1
+                                                }
+                                            """
+                                )
+                )
+                .andExpectAll(
+                        MockMvcResultMatchers.status().isOk(),
+                        MockMvcResultMatchers.content().string("4670")
+                );
     }
+}

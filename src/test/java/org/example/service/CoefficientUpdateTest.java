@@ -64,7 +64,7 @@ class CoefficientUpdateTest {
                                         // language=JSON
                                         """
                                             {
-                                               "idAgeAndExperience":2,
+                                               "idAgeAndExperience": 2,
                                                "coefficientES": 3
                                                 }
                                             """
@@ -91,8 +91,8 @@ class CoefficientUpdateTest {
                                         // language=JSON
                                         """
                                             {
-                                               "idEnginePower":2,
-                                               "coefficientEP":2
+                                               "idEnginePower": 2,
+                                               "coefficientEP": 2
                                                 }
                                             """
                                 )
@@ -131,8 +131,8 @@ class CoefficientUpdateTest {
                                 """
                                 {
                                   "coefficientCCUpdate": {
-                                      "limitDrivers": "Неограниченное количество водителей",
-                                      "coefficientCC": 3.0
+                                  "limitDrivers": "Неограниченное количество водителей",
+                                  "coefficientCC": 3.0
                                     }
                                 }
                                 """
@@ -145,7 +145,7 @@ class CoefficientUpdateTest {
                                         // language=JSON
                                         """
                                             {
-                                               "idSeasonalityStatus":2,
+                                               "idSeasonalityStatus": 2,
                                                "coefficientCS": 3
                                                 }
                                             """

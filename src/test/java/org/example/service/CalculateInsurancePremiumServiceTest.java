@@ -51,7 +51,7 @@ class CalculateInsurancePremiumServiceTest {
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
-                        MockMvcResultMatchers.content().string(String.valueOf(Double.valueOf(4670.0)))
+                        MockMvcResultMatchers.content().string(String.valueOf(Double.valueOf(5000.0)))
                 );
     }
 }

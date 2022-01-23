@@ -30,7 +30,7 @@ class CalculateInsurancePremiumServiceTest {
     MockMvc mockMvc;
 
     @Test
-    void shouldCalculateInsuracePremium() throws Exception {
+    void shouldCalculateInsurancePremium() throws Exception {
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/calculate")
                                 .contentType(MediaType.APPLICATION_JSON)
@@ -51,7 +51,7 @@ class CalculateInsurancePremiumServiceTest {
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
-                        MockMvcResultMatchers.content().string(String.valueOf(4670.0))
+                        MockMvcResultMatchers.content().string(String.valueOf(Double.valueOf(4670.0)))
                 );
     }
 }

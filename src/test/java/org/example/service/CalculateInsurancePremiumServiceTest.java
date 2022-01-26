@@ -50,7 +50,6 @@ class CalculateInsurancePremiumServiceTest {
                                 )
                 )
                 .andExpectAll(
-                        MockMvcResultMatchers.status().isOk(),
                         MockMvcResultMatchers.content().json(
                                 // language=JSON
                                 """

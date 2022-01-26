@@ -45,13 +45,22 @@ class CalculateInsurancePremiumServiceTest {
                                                "idSeasonalityStatus": 8,
                                                "idInsuranceCompany": 2,
                                                "insuranceTerm": 1
-                                                }
+                                             }
                                             """
                                 )
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
-                        MockMvcResultMatchers.content().string(String.valueOf(Double.valueOf(5000.0)))
+                        MockMvcResultMatchers.content().json(
+                                // language=JSON
+                                """
+                                {
+                                  "priceResponse": {
+                                    "price": 4670
+                                  }
+                                }
+                                """
+                        )
                 );
     }
 }

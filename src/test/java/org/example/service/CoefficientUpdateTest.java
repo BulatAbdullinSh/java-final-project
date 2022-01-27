@@ -107,8 +107,8 @@ class CoefficientUpdateTest {
                 );
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/coefficient/cs")
-                                .queryParam("idLimitStatus", String.valueOf(2))
-                                .queryParam("coefficientCC", String.valueOf(3))
+                                .queryParam("idSeasonalityStatus", String.valueOf(2))
+                                .queryParam("coefficientCS", String.valueOf(3))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),

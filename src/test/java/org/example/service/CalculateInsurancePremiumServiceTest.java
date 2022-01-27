@@ -32,20 +32,20 @@ class CalculateInsurancePremiumServiceTest {
     @Test
     void shouldCalculateInsurancePremium() throws Exception {
         mockMvc.perform(
-                        MockMvcRequestBuilders.post("/calculate")
+                        MockMvcRequestBuilders.get("/calculate")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(
                                         // language=JSON
                                         """
                                             {
-                                               "idRegion": 10,
-                                               "idAgeAndExperience": 1,
-                                               "idEnginePower": 4,
-                                               "idLimitStatus": 1,
-                                               "idSeasonalityStatus": 8,
-                                               "idInsuranceCompany": 2,
-                                               "insuranceTerm": 1
-                                             }
+                                                 "idRegion": 10,
+                                                 "idAgeAndExperience": 1,
+                                                 "idEnginePower": 4,
+                                                 "idLimitStatus": 1,
+                                                 "idSeasonalityStatus": 8,
+                                                 "idInsuranceCompany": 2,
+                                                 "insuranceTerm": 1
+                                                }
                                             """
                                 )
                 )
@@ -55,7 +55,9 @@ class CalculateInsurancePremiumServiceTest {
                                 // language=JSON
                                 """
                                 {
-                                    "price": 4670
+                                    "priceResponse": {
+                                        "price": 4670
+                                      }
                                  }
                                 """
                         )

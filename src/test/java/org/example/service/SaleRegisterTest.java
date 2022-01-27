@@ -20,7 +20,7 @@ import java.nio.file.Path;
 @DirtiesContext
 @AutoConfigureMockMvc
 
-class CalculateInsurancePremiumServiceTest {
+class SaleRegisterTest {
     @Container
     static DockerComposeContainer<?> compose = new DockerComposeContainer<>(
             Path.of("docker-compose.yml").toFile()
@@ -32,19 +32,21 @@ class CalculateInsurancePremiumServiceTest {
     @Test
     void shouldCalculateInsurancePremium() throws Exception {
         mockMvc.perform(
-                        MockMvcRequestBuilders.post("/calculate")
+                        MockMvcRequestBuilders.post("/sales/register")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(
                                         // language=JSON
                                         """
-                                            {
-                                                 "idRegion": 10,
-                                                 "idAgeAndExperience": 1,
-                                                 "idEnginePower": 4,
-                                                 "idLimitStatus": 1,
-                                                 "idSeasonalityStatus": 8,
-                                                 "idInsuranceCompany": 2,
-                                                 "insuranceTerm": 1
+                                            {  
+                                            "insuranceCompanyName": "Insurance Company №3",
+                                            "userName": "Jonn",
+                                            "userSurname": "Smitt",
+                                            "vinNumberCar": "ZC45545NT4544",
+                                            "phoneNumber": "9503432343",
+                                            "email": "smitt@mail.ru",
+                                            "region":  "Казань",
+                                            "bankCardNumber": "2344 3456 6789 3456",
+                                            "insurancePremiumPrice": 5340
                                                 }
                                             """
                                 )
@@ -55,9 +57,12 @@ class CalculateInsurancePremiumServiceTest {
                                 // language=JSON
                                 """
                                 {
-                                    "priceResponse": {
-                                        "price": 4670
-                                      }
+                                  "sale": {
+                                     "insuranceCompanyName": "Insurance Company №3",
+                                     "userName": "Jonn",
+                                     "userSurname": "Smitt",
+                                     "insurancePremiumPrice": 5340
+                                   }
                                  }
                                 """
                         )

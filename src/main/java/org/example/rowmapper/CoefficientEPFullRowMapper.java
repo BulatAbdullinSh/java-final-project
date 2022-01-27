@@ -1,7 +1,6 @@
 package org.example.rowmapper;
 
 import org.example.model.CoefficientEPFullModel;
-import org.example.model.CoefficientEPModel;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

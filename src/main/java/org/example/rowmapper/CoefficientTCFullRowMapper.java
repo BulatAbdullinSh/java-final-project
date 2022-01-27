@@ -1,7 +1,6 @@
 package org.example.rowmapper;
 
 import org.example.model.CoefficientTCFullModel;
-import org.example.model.CoefficientTCModel;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

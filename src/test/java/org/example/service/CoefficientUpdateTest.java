@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -49,18 +48,10 @@ class CoefficientUpdateTest {
                                 """
                         )
                 );
-/*        mockMvc.perform(
+        mockMvc.perform(
                         MockMvcRequestBuilders.post("/coefficient/es")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(
-                                        // language=JSON
-                                        """
-                                            {
-                                               "idAgeAndExperience": 2,
-                                               "coefficientES": 3
-                                                }
-                                            """
-                                )
+                                .queryParam("idAgeAndExperience", String.valueOf(2))
+                                .queryParam("coefficientES", String.valueOf(3))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
@@ -78,16 +69,8 @@ class CoefficientUpdateTest {
                 );
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/coefficient/ep")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(
-                                        // language=JSON
-                                        """
-                                            {
-                                               "idEnginePower": 2,
-                                               "coefficientEP": 2
-                                                }
-                                            """
-                                )
+                                .queryParam("idEnginePower", String.valueOf(2))
+                                .queryParam("coefficientEP", String.valueOf(2))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
@@ -105,16 +88,8 @@ class CoefficientUpdateTest {
                 );
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/coefficient/cc")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(
-                                        // language=JSON
-                                        """
-                                            {
-                                               "idLimitStatus": 2,
-                                               "coefficientCC": 3
-                                                }
-                                            """
-                                )
+                                .queryParam("idLimitStatus", String.valueOf(2))
+                                .queryParam("coefficientCC", String.valueOf(3))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
@@ -132,16 +107,8 @@ class CoefficientUpdateTest {
                 );
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/coefficient/cs")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(
-                                        // language=JSON
-                                        """
-                                            {
-                                               "idSeasonalityStatus": 2,
-                                               "coefficientCS": 3
-                                                }
-                                            """
-                                )
+                                .queryParam("idLimitStatus", String.valueOf(2))
+                                .queryParam("coefficientCC", String.valueOf(3))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
@@ -156,6 +123,6 @@ class CoefficientUpdateTest {
                                 }
                                 """
                         )
-                );*/
+                );
     }
 }

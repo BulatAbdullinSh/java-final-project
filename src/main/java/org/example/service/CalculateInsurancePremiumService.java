@@ -2,7 +2,6 @@ package org.example.service;
 
 import org.example.dto.CalculateInsurancePremiumRequestDTO;
 import org.example.dto.PriceResponseDTO;
-import org.example.exception.InsuranceProductNotFoundException;
 import org.example.exception.ServiceErrorException;
 import org.example.manager.CalculateInsurancePremiumManager;
 import org.example.model.MarginLevel;
@@ -10,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Component;
 
-import java.util.ServiceConfigurationError;
 
 @Component
 @RequiredArgsConstructor

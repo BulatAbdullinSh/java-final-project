@@ -55,10 +55,8 @@ class CalculateInsurancePremiumServiceTest {
                                 // language=JSON
                                 """
                                 {
-                                  "priceResponse": {
                                     "price": 4670
-                                  }
-                                }
+                                 }
                                 """
                         )
                 );

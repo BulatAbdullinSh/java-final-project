@@ -32,16 +32,8 @@ class CoefficientUpdateTest {
     void shouldPerformUpdateCoefficient() throws Exception {
         mockMvc.perform(
                         MockMvcRequestBuilders.post("/coefficient/tc")
-                                .contentType(MediaType.APPLICATION_JSON)
-                                .content(
-                                        // language=JSON
-                                        """
-                                            {
-                                               "idRegion": 2,
-                                               "coefficientTC": 3
-                                                }
-                                            """
-                                )
+                                .queryParam("idRegion", String.valueOf(2))
+                                .queryParam("coefficientTC", String.valueOf(3))
                 )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),

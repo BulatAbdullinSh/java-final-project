@@ -1,7 +1,10 @@
 package org.example.exception;
 
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
+@ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
 public class ServiceErrorException extends Throwable {
     public ServiceErrorException() {
     }

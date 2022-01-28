@@ -32,7 +32,7 @@ public class CalculateInsurancePremiumService {
             ));
             return responseDTO;
         }
-        catch (EmptyResultDataAccessException e) {
+        catch (Exception e) {
             throw new ServiceErrorException(e);
         }
     }

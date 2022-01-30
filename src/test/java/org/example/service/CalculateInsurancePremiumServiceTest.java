@@ -32,7 +32,7 @@ class CalculateInsurancePremiumServiceTest {
     @Test
     void shouldCalculateInsurancePremium() throws Exception {
         mockMvc.perform(
-                        MockMvcRequestBuilders.get("/calculate")
+                        MockMvcRequestBuilders.post("/calculate")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(
                                         // language=JSON

@@ -65,7 +65,7 @@ Content-Type: image/png
 
 ###
 
-GET http://localhost:8080/calculate
+POST http://localhost:8080/calculate
 Content-Type: application/json
 
 {
